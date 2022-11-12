@@ -1,11 +1,63 @@
-
+/* A CSS rule that tells the browser to include the padding and border in an element's total width and
+height. */
 html {
   box-sizing: border-box;
 }
-
+/* Setting the background color of the page to a light yellow. */
 body {
   margin: 0;
   min-height: 100vh;
-  background: #45badd;
-
+  background: #FCF29C;
+}
+/* Setting the background image to the container. */
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('https://media1.giphy.com/media/l0MYKtrxlkiYE596g/giphy.gif?cid=ecf05e47vaev0e2ljvdubdtdxc622pwx2xarxldf71r92n6l&rid=giphy.gif&ct=g');
+  background-size: contain;
+  background-position: left center;
+  background-repeat:no-repeat;
+}
+/* This is styling the button. */
+button{
+  cursor: pointer;
+  outline: none;
+  width: 200px;
+  height: 50px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  font:bold;
+  color: #;
+  background: #FEBE8C;
+  border:none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.2);
+}
+/* Making the button brighter when the mouse is hovering over it. */
+button:hover{
+  filter: brightness(95%);
+}
+/* Making the button slightly smaller when it is clicked. */
+button:active{
+  transform: scale(0.98);
+}
+/* Making the button look disabled. */
+button:disabled{
+  cursor: default;
+  filter: brightness(30%);
+}
+/* This is a media query. It is saying that if the screen is less than 1000px wide, then the background
+image should be covered and centered. The button should also have a larger shadow. */
+@media screen and (max-width : 1000px){
+  .container{
+    background-size: cover;
+    background-position: center center;
+  }
+  button{
+    box-shadow: 5px 5px 30px 20px rgba(0, 0, 0, 0.5);
+  }
 }
